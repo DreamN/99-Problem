@@ -13,9 +13,9 @@ package com.inaranirattisai.ninetyNineProblems
 
 class P12[T] {
 
-  def multiple(x: Int, y: T, ls: List[T]): List[T] = if(x==0) ls else multiple(x-1, y, y :: ls)
+  def multiply(x: Int, y: T, ls: List[T]): List[T] = if(x==0) ls else multiply(x-1, y, y :: ls)
 
   def decode(list: List[(Int, T)]): List[T] = {
-    (new P07[T]).flatten(list.map(x => multiple(x._1, x._2, List.empty)))
+    (new P07[T]).flatten(list.map(x => multiply(x._1, x._2, List.empty)))
   }
 }
