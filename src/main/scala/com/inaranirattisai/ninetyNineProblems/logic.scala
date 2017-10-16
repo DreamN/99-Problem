@@ -15,7 +15,7 @@ object logic {
     case false => and(y, true)
   }
   def nand(x: Boolean, y: Boolean) = not(and(x, y))
-  def nor(x: Boolean, y: Boolean) = not(orX(x, y))
+  def nor(x: Boolean, y: Boolean) = not(or(x, y))
   def equ(x: Boolean, y: Boolean) = nor(and(x, not(y)), and(not(x), y))
   def xor(x: Boolean, y: Boolean) = not(equ(x, y))
   def imp(x: Boolean, y: Boolean) = (x, y) match {
