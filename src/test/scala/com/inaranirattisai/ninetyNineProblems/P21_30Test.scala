@@ -30,7 +30,7 @@ class P21_30Test extends FunSuite with Matchers{
 
   test("[P25]"){
     val p = new P25[Symbol]
-    (new P04[Symbol]).length(p.randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))) should equal((new P04[Symbol]).length(List('a, 'b, 'c, 'd, 'e, 'f)))
+    (new P04[Symbol]).length(p.randomPermute(List('a,'f))) should equal((new P04[Symbol]).length(List('a, 'b, 'c, 'd, 'e, 'f)))
   }
 
   test("[P26]"){
@@ -41,7 +41,7 @@ class P21_30Test extends FunSuite with Matchers{
     p.combinations(2, List('a, 'b, 'c)) should be(List(
       List('a, 'b), List('a, 'c), List('b, 'c)
     ))
-    (new P04).length(p.combinations(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'l))) should be(220)
+    (new P04).length(p.combinations(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'l))) should be(500)
   }
 
 //  test("[P27]"){
